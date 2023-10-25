@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:lottie/lottie.dart';
 import 'package:medcare/welcome/splash3.dart';
-import '../Modules/welcome_page.dart';
 
 class MainScreen extends StatelessWidget {
   final Duration duration = const Duration(milliseconds: 800);
@@ -82,18 +81,23 @@ class MainScreen extends StatelessWidget {
             FadeInUp(
               duration: duration,
               delay: const Duration(milliseconds: 600),
-              child: SButton(
-                size: size,
-                borderColor: Colors.grey,
-                color: Colors.white,
-                img: 'assets/images/gmail.png',
-                text: "Continue with Email",
-                textStyle: null,
+              child: SizedBox(
+                width: size.width / 0.1,
+                child: ElevatedButton(onPressed: (){},
+                  child: SButton(
+                    size: size,
+                    borderColor: Colors.grey,
+                    color: Colors.black,
+                    img: 'assets/images/gmail.png',
+                    text: "Continue with Email",
+                    textStyle: null,
+                  ),style: ElevatedButton.styleFrom(
+                    primary: Colors.white,
+                    ),
+            ),
               ),
             ),
-
-            ///
-            const SizedBox(
+              SizedBox(
               height: 20,
             ),
             FadeInUp(

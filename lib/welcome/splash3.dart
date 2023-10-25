@@ -31,7 +31,7 @@ class SButton extends StatelessWidget {
         );
       },
       child: Container(
-        width: size.width / 1.2,
+        width: size.width / 0.8,
         height: size.height / 15,
         decoration: BoxDecoration(
             color: color,

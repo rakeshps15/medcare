@@ -12,7 +12,7 @@ class Items {
 
 List<Items> listOfItems = [
   Items(
-    img: "assets/1.png",
+    img: "assets/images/joey.png",
     title: "Discover the best medical\nschool and job",
     subTitle:
     "There are 25.000+ best medical\njobs and schools, choose your\nchoice now",
