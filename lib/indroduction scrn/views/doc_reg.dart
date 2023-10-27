@@ -5,20 +5,20 @@ void main()
 {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: Signup(),));
+    home: DocSignup(),));
 }
-class Signup extends StatefulWidget {
+class DocSignup extends StatefulWidget {
   @override
-  State<Signup> createState() => _SignupState();
+  State<DocSignup> createState() => _SignupState();
 }
 
-class _SignupState extends State<Signup> {
+class _SignupState extends State<DocSignup> {
   var formkey2 = GlobalKey<FormState>();
   var uname = TextEditingController();
   var uadd = TextEditingController();
   var uphn = TextEditingController();
   var uaphn = TextEditingController();
-  var ubld = TextEditingController();
+  var ulic = TextEditingController();
   var uemail = TextEditingController();
   var pass = TextEditingController();
   var cpass = TextEditingController();
@@ -26,19 +26,7 @@ class _SignupState extends State<Signup> {
   bool passvisibility1 = true;
   bool passvisibility2 = true;
 
-  String dropdownvalue = 'Blood Group';
-  var items = [
-    'Blood Group',
-    'A +ve',
-    'A -ve',
-    'AB +ve',
-    'AB -ve',
-    'B +ve',
-    'B -ve',
-    'O +ve',
-    'O -ve',
-  ];
-
+  String dropdownvalue = 'Select Gender';
   var gender =[
     'male',
     'female'
@@ -56,8 +44,8 @@ class _SignupState extends State<Signup> {
               const Padding(
                 padding: EdgeInsets.only(left: 100, right: 100, top: 100),
                 child: Text(
-                  "Sign Up",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+                  "Doctor Sign Up",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28),
                 ),
               ),
               SizedBox(
@@ -106,7 +94,7 @@ class _SignupState extends State<Signup> {
                   },
                   textInputAction: TextInputAction.next,
                   decoration: InputDecoration(
-                      hintText: "Address",
+                      hintText: "Hospital Address",
                       prefixIcon: Icon(Icons.home),
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10))),
@@ -190,70 +178,30 @@ class _SignupState extends State<Signup> {
 
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child:Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    DropdownButtonFormField2<String>(
-                      isExpanded: true,
-                      decoration: InputDecoration(
-                        // Add Horizontal padding using menuItemStyleData.padding so it matches
-                        // the menu padding when button's width is not specified.
-                        contentPadding: const EdgeInsets.symmetric(vertical: 16),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                        // Add more decoration..
-                      ),
-                      hint: const Text(
-                        'Select Your Blood Group',
-                        style: TextStyle(fontSize: 14),
-                      ),
-                      items: items
-                          .map((item) => DropdownMenuItem<String>(
-                        value: item,
-                        child: Text(
-                          item,
-                          style: const TextStyle(
-                            fontSize: 14,
-                          ),
-                        ),
-                      ))
-                          .toList(),
-                      validator: (value) {
-                        if (value == null) {
-                          return 'Please select Blood Group.';
-                        }
-                        return null;
-                      },
-                      onChanged: (value) {
-                        //Do something when selected item is changed.
-                      },
-                      onSaved: (value) {
-                        //selectedValue = value.toString();
-                      },
-                      buttonStyleData: const ButtonStyleData(
-                        padding: EdgeInsets.only(right: 8),
-                      ),
-                      iconStyleData: const IconStyleData(
-                        icon: Icon(
-                          Icons.arrow_drop_down,
-                          color: Colors.black45,
-                        ),
-                        iconSize: 24,
-                      ),
-                      dropdownStyleData: DropdownStyleData(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                      ),
-                      menuItemStyleData: const MenuItemStyleData(
-                        padding: EdgeInsets.symmetric(horizontal: 16),
-                      ),
-                    ),
-                  ],
+                child: TextFormField(
+                  textCapitalization: TextCapitalization.characters,
+                  controller: ulic,
+                  validator: (username) {
+                    if (username!.isEmpty ||
+                        !username.contains("@") ||
+                        !username.contains(".") || username.length <12) {
+                      return "Fields are empty or Invalid";
+                    } else {
+                      return null;
+                    }
+
+                  },
+                  decoration: InputDecoration(
+                      hintText: "License Number",
+                      prefixIcon: Icon(Icons.contact_mail_outlined),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10))),
                 ),
               ),
-              SizedBox(height: 10,),
+              SizedBox(
+                height: 10,
+              ),
+
 
               Padding(
                 padding: const EdgeInsets.all(8.0),
