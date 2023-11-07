@@ -29,7 +29,7 @@ class _GetStartBtnState extends State<GetStartBtn> {
       Future.delayed(const Duration(seconds: 2)).then((value) {
         isLoading = false;
         Navigator.pushReplacement(
-            context, CupertinoPageRoute(builder: (_) => const TopCardSection()));
+            context, MaterialPageRoute(builder: (context) =>  TopCardSection()));
       });
     });
   }
