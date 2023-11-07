@@ -36,6 +36,13 @@ dependencies:
   smooth_page_indicator:
   dropdown_button2:
   dropdown_textfield:
+  dot_navigation_bar: ^1.0.2
+  getwidget:
+  google_fonts:
+  flutter_screenutil:
+  adoptive_calendar:
+  salomon_bottom_bar:
+  iconsax:
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -68,6 +75,8 @@ flutter:
   assets:
     - assets/images/
     - assets/med/
+    - assets/animations/
+    - assets/logo/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -79,39 +79,60 @@ class MainScreen extends StatelessWidget {
 
             /// GOOGLE BTN
             FadeInUp(
-              duration: duration,
-              delay: const Duration(milliseconds: 600),
-              child: SizedBox(
-                width: size.width / 0.1,
-                child: ElevatedButton(onPressed: (){},
-                  child: SButton(
-                    size: size,
-                    borderColor: Colors.grey,
-                    color: Colors.black,
-                    img: 'assets/images/gmail.png',
-                    text: "Continue with Email",
-                    textStyle: null,
-                  ),style: ElevatedButton.styleFrom(
-                    primary: Colors.white,
-                    ),
+                duration: duration,
+                delay: const Duration(milliseconds: 600),
+                child: Container(
+                  width: 500,
+                  height: 50,
+                  child: ElevatedButton.icon(
+                      onPressed: (){},
+                      icon: Icon( // <-- Icon
+                        Icons.email_outlined,
+                        color: Colors.grey,
+                        size: 24.0,
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,  ),label: Text("Continue with Gmail",style: TextStyle(color: Colors.black),)),
+                )
+              // SButton(
+              //   size: size,
+              //   borderColor: Colors.grey,
+              //   color: Colors.white,
+              //   img: 'assets/images/gmail.png',
+              //   text: "Continue with Email",
+              //   textStyle: null,
+              // ),
             ),
-              ),
-            ),
-              SizedBox(
+
+            ///
+            const SizedBox(
               height: 20,
             ),
             FadeInUp(
-              duration: duration,
-              delay: const Duration(milliseconds: 200),
-              child: SButton(
-                size: size,
-                borderColor: Colors.grey,
-                color:  Colors.white,
-                img: 'assets/images/phone.png',
-                text: "Continue with Phone",
-                textStyle: null,
-
-              ),
+                duration: duration,
+                delay: const Duration(milliseconds: 200),
+                child:Container(
+                  width: 500,
+                  height: 50,
+                  child: ElevatedButton.icon(
+                      onPressed: (){},
+                      icon: ImageIcon(
+                        AssetImage("assets/images/phone.png"),
+                        color: Colors.grey,
+                        size: 24,
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,  ),label: Text("Continue with Phone",style: TextStyle(color: Colors.black),)),
+                )
+              // SButton(
+              //   size: size,
+              //   borderColor: Colors.grey,
+              //   color:  Colors.white,
+              //   img: 'assets/images/phone.png',
+              //   text: "Continue with Phone",
+              //   textStyle: null,
+              //
+              // ),
             ),
 
             ///

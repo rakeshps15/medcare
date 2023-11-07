@@ -12,20 +12,18 @@ class Items {
 
 List<Items> listOfItems = [
   Items(
-    img: "assets/images/joey.png",
-    title: "Discover the best medical\nschool and job",
-    subTitle:
-    "There are 25.000+ best medical\njobs and schools, choose your\nchoice now",
+    img: "assets/images/in1.jpg",
+    title: "Exceptional Care\nClose to you",
+    subTitle: "Say yes to good health",
   ),
   Items(
-    img: "assets/2.png",
-    title: "Share your training\nprograms",
-    subTitle:
-    "There will be many people who\n want hear your stories and\n experiences",
+    img: "assets/images/in2.jpg",
+    title: "Makes Online And Live\nConsultation Easily\nwith top Doctors",
+    subTitle: "",
   ),
   Items(
-    img: "assets/3.png",
-    title: "Find another doctor near\nyou",
-    subTitle: "Make your friendship and create a\nnew community",
+    img: "assets/images/in3.jpg",
+    title: "Make your friendship and create a new community",
+    subTitle: "",
   ),
 ];

@@ -1,5 +1,6 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
+import 'package:medcare/Modules/login.dart';
 
 void main()
 {
@@ -418,6 +419,9 @@ class _SignupState extends State<Signup> {
                     "Sign Up",
                     style: TextStyle(color: Colors.black),
                   )),
+              TextButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Login()));
+              }, child: Text("Already a User!.....Login Now"))
             ]),
           ),
         ),
