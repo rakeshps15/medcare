@@ -43,6 +43,7 @@ dependencies:
   adoptive_calendar:
   salomon_bottom_bar:
   iconsax:
+  flutter_staggered_grid_view:
 
 
   # The following adds the Cupertino Icons font to your application.
