@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'indroduction scrn/clrs/clrs.dart';
-import 'indroduction scrn/main run page/homep.dart';
+import 'introduction_page/clrs/clrs.dart';
+import 'introduction_page/views/homep.dart';
 
 
 void main() {
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Intro Screen',
+      title: 'MEDACRE',
       theme: ThemeData(
           textTheme: const TextTheme(
             displayLarge: TextStyle(

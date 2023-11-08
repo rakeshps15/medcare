@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medcare/welcome/splash%202.dart';
+import 'package:medcare/sign_in_page/splash%202.dart';
 
 class SButton extends StatelessWidget {
   const SButton({

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medcare/welcome/splash%202.dart';
+import 'package:medcare/sign_in_page/splash%202.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Welcome Screen',
+      title: 'MEDCARE',
       home: MainScreen(),
     );
   }

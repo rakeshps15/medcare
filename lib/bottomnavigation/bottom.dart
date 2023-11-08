@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
+import 'package:iconsax/iconsax.dart';
 
 class BottomNavBar extends StatefulWidget {
   final Function(int) onTap;
@@ -20,23 +20,23 @@ class _BottomNavBarState extends State<BottomNavBar> {
       onTap: widget.onTap,
       items: [
         SalomonBottomBarItem(
-          icon: Icon(Iconsax.home),
-          title: Text(""),
-          selectedColor: Colors.purple,
+          icon: const Icon(Iconsax.home),
+          title: const Text("HOME"),
+          selectedColor: Colors.blue,
         ),
         SalomonBottomBarItem(
-          icon: Icon(Iconsax.save_2),
-          title: Text(""),
+          icon: const Icon(Iconsax.save_2),
+          title: const Text("APPOINTMENTS"),
           selectedColor: Colors.pink,
         ),
         SalomonBottomBarItem(
-          icon: Icon(Iconsax.activity),
-          title: Text(""),
+          icon: const Icon(Iconsax.note_1),
+          title: const Text("REPORTS"),
           selectedColor: Colors.orange,
         ),
         SalomonBottomBarItem(
-          icon: Icon(Iconsax.user),
-          title: Text(""),
+          icon: const Icon(Iconsax.user),
+          title: const Text("PROFILE"),
           selectedColor: Colors.teal,
         ),
       ],

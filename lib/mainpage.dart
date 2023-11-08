@@ -239,7 +239,8 @@ class UpcomingScheduleCard extends StatelessWidget {
 }
 
 class TopCardSection extends StatelessWidget {
-  const TopCardSection({Key? key}) : super(key: key);
+  const
+  TopCardSection({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
 import 'package:medcare/mainpage.dart';
-import 'package:medcare/welcome/splash%202.dart';
 import '../clrs/clrs.dart';
 
 
@@ -29,7 +27,7 @@ class _GetStartBtnState extends State<GetStartBtn> {
       Future.delayed(const Duration(seconds: 2)).then((value) {
         isLoading = false;
         Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) =>  TopCardSection()));
+            context, MaterialPageRoute(builder: (context) =>  MyApp()));
       });
     });
   }
