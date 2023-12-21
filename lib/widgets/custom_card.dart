@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class CustomCard extends StatelessWidget {
   @override
@@ -15,11 +16,13 @@ class CustomCard extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Row(
           children: <Widget>[
-            Image.network(
-              'https://i.imgur.com/HXuxNoI.png',
+            CachedNetworkImage(
+              imageUrl: 'https://i.imgur.com/HXuxNoI.png',
               width: 116,
               height: 140,
               fit: BoxFit.cover,
+              placeholder: (context, url) => CircularProgressIndicator(),
+              errorWidget: (context, url, error) => Icon(Icons.error),
             ),
             const SizedBox(
               width: 10,
@@ -31,8 +34,8 @@ class CustomCard extends StatelessWidget {
                   Text(
                     'Connect with doctors & get suggestions',
                     style: GoogleFonts.poppins(
-                      fontSize: 16,
-                      // fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w400,
                     ),
                   ),
                   Padding(
@@ -40,18 +43,17 @@ class CustomCard extends StatelessWidget {
                     child: Text(
                       'Connect now and get expert insights',
                       style: GoogleFonts.poppins(
-                        fontSize: 12,
+                        fontSize: 14,
+                        //fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
                   ElevatedButton(
-                    onPressed: () {
-                      // Put your code here
-                    },
+                    onPressed: () {},
                     child: Text(
-                      'view details',
+                      'VIEW DETAILS',
                       style: GoogleFonts.poppins(
-                        fontSize: 12,
+                        fontSize: 12.5,
                       ),
                     ),
                     style: ElevatedButton.styleFrom(
